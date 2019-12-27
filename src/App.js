@@ -3,27 +3,23 @@ import "./App.css";
 import Main from "./Main";
 import Bio from "./Bio";
 import { Switch, Route, Link } from "react-router-dom";
+import BgSVG from "./BgSVG"
 
 class App extends Component {
   state = {
-    selectedPage: "bio"
-  };
-  setPage = e => {
-    e.preventDefault();
-    this.setState({ selectedPage: e.target.value });
-  };
+    selectedPage: ""
+  }
+  handlePage = (e) => {
+    this.setState({ selectedPage: e })
+  }
   render() {
-    const { selectedPage } = this.state;
+    const { selectedPage } = this.state
+    console.log(selectedPage)
     return (
       <div>
-        <div className="nav">
-        <Link to="/">Home</Link>
-        <Link to="/bio">Bio</Link>
-        </div>
-        <Switch>
-          <Route exact path="/" component={Main} />
-          <Route path="/bio" component={Bio} />
-        </Switch>
+        <BgSVG />
+        {selectedPage === "" && <Main handlePage={this.handlePage} />}
+        {selectedPage === "bio" && <Bio handlePage={this.handlePage} />}
       </div>
     );
   }

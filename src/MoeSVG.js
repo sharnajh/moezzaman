@@ -1,19 +1,6 @@
-import React, { Component } from "react";
-import anime from "animejs/lib/anime.es.js";
+import React from "react";
 
-class MoeSVG extends Component {
-  componentDidMount() {
-    anime({
-      targets: ".cls-1",
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: "cubicBezier(.5, .05, .1, .3)",
-      duration: 1000,
-      delay: function(el, i) {
-        return i * 14;
-      }
-    });
-  }
-  render() {
+const MoeSVG = () => {
     return (
      
       <svg
@@ -1031,7 +1018,6 @@ class MoeSVG extends Component {
       </svg>
     
     );
-  }
 }
 
 export default MoeSVG;
