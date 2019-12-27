@@ -36,19 +36,26 @@ class Bio extends Component {
     );
   }
   directHome = () => {
-    anime({
+    const tl = anime.timeline({
+      easing: "easeOutExpo"
+    });
+    tl.add({
       targets: "#bio",
       opacity: [1,0],
       easing: "easeOutExpo",
-      duration: 1
-    })
-    anime({
+      duration: 1000
+    }, 0)
+    .add({
       targets: ".polymorph",
       points: [{ value: "215,110 0,110 0,0 215,0" }],
+      duration: 1000
+    }, 0)
+    .add({
+      targets: ".polymorph",
       easing: "easeOutQuad",
       fill: "#fff",
-      duration: 900
-    }).finished.then(() =>  this.props.handlePage(""))
+      duration: 300
+    },900).finished.then(() =>  this.props.handlePage(""))
   };
   render() {
     return (

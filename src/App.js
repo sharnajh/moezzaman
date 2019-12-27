@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import Main from "./Main";
 import Bio from "./Bio";
-import { Switch, Route, Link } from "react-router-dom";
 import BgSVG from "./BgSVG"
 
 class App extends Component {
