@@ -16,24 +16,8 @@ class Main extends Component {
         duration: 3000,
         delay: (el, i) => 600 + 90 * i
       },
-      100
+      0
     )
-      .add(
-        {
-          targets: ".polymorph",
-          fill: "#000",
-          duration: 2000
-        },
-        2200
-      )
-      .add(
-        {
-          targets: [".title"],
-          color: "#fff",
-          duration: 2000
-        },
-        2000
-      )
       .add(
         {
           targets: ".subtitle .letter",
@@ -42,14 +26,17 @@ class Main extends Component {
           color: "#fff",
           delay: (el, i) => 600 + 90 * i
         },
-        2500
+        1500
       )
       .add({
-        targets: "#nav",
+        targets: "#nav .wop",
         opacity: [0, 1],
+        translateY: [150, 0],
+        translateX: 0,
         color: "#fff",
-        duration: 3000
-      })
+        duration: 4000,
+        delay: (el, i) => 1000 + 100 * i
+      }, 2000)
   }
   render() {
     // Name Strings

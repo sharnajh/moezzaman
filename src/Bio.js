@@ -50,12 +50,7 @@ class Bio extends Component {
       points: [{ value: "215,110 0,110 0,0 215,0" }],
       duration: 1500
     }, 0)
-    .add({
-      targets: ".polymorph",
-      easing: "easeOutQuad",
-      fill: "#fff",
-      duration: 300
-    },1400).finished.then(() =>  this.props.handlePage(""))
+    this.props.handlePage("")
   };
   render() {
     return (

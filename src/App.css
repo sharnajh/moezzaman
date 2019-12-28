@@ -26,11 +26,11 @@ body {
 }
 
 .polymorph {
-  fill: none;
+  fill: "#000";
 }
 
 .description {
-  max-width: 850px;
+  width: 50%;
   text-align: justify;
 }
 
@@ -71,6 +71,7 @@ svg {
   letter-spacing: 0.5em;
   cursor: pointer;
   margin: 0;
+  color:white;
 }
 
 .subtitle {
@@ -94,18 +95,66 @@ svg {
 }
 
 #nav {
-  display: block;
+  display: flex;
   position: absolute;
   margin-top:80px;
   font-weight: 200;
   font-size: 1em;
   margin-left: -15px;
+  list-style-type: none;
+  margin-left:-40px;
+  align-items: center;
+  justify-content: space-between;
+  width:120px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+#nav li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:0px;
+  cursor: pointer;
+}
+
+.icontext {
+  opacity: 0;
+  color: "#00d5ff";
 }
 
 .home {
   position: inline-block;
   z-index:9;
   width:32px;
+}
+
+@media only screen and (max-width: 900px) {
+  .title {
+    font-size: 2em;
+    margin-left:11px;
+  }
+  .subtitle {
+    font-size: 0.7em;
+    margin-left: 5px;
+  }
+  .moetitle {
+    font-size:90px;
+  }
+  #svgcontainer {
+    width:200px;
+  }
+  .description {
+    margin-bottom:50px;
+  }
+
+  #bio {
+    justify-content: space-evenly;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -125,10 +174,13 @@ svg {
   }
   .description {
     margin-bottom:50px;
-    width: 80%;
   }
 
   #bio {
     justify-content: space-evenly;
   }
+}
+
+#linkedin {
+  stroke: blue;
 }

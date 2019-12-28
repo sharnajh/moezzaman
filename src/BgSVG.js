@@ -12,3 +12,4 @@ const BgSVG = () => {
 };
 
 export default BgSVG;
+
