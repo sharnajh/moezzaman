@@ -79,7 +79,6 @@ class Main extends Component {
               </h2>
               <Nav  handlePage={this.props.handlePage} />
             </div>
-          )}
         </div>
 
     );
