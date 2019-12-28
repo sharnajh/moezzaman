@@ -16,7 +16,7 @@ class Bio extends Component {
       {
         targets: ".polymorph",
         fill: "#000",
-        points: [{ value: "215,110 0,110 190,90 215,0" }],
+        points: [{ value: "215,110 0,110 195,95 215,0" }],
         easing: "easeOutQuad",
         duration: 900,
         loop: false
@@ -48,14 +48,14 @@ class Bio extends Component {
     .add({
       targets: ".polymorph",
       points: [{ value: "215,110 0,110 0,0 215,0" }],
-      duration: 1000
+      duration: 1500
     }, 0)
     .add({
       targets: ".polymorph",
       easing: "easeOutQuad",
       fill: "#fff",
       duration: 300
-    },900).finished.then(() =>  this.props.handlePage(""))
+    },1400).finished.then(() =>  this.props.handlePage(""))
   };
   render() {
     return (

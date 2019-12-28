@@ -21,6 +21,10 @@ body {
   height: 100vh;
 }
 
+#bgsvg {
+  height: 100vh;
+}
+
 .polymorph {
   fill: none;
 }

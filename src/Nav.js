@@ -5,7 +5,7 @@ class Nav extends Component {
     return (
       <div id="nav" onClick={() => this.props.handlePage("bio")}>
         
-        bio
+        Bio
       </div>
     );
   }
