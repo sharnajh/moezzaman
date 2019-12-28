@@ -3,6 +3,7 @@ import "./App.css";
 import Main from "./Main";
 import Bio from "./Bio";
 import BgSVG from "./BgSVG"
+import Message from "./Message"
 
 class App extends Component {
   state = {
@@ -10,6 +11,7 @@ class App extends Component {
   }
   handlePage = (e) => {
     this.setState({ selectedPage: e })
+    console.log(e)
   }
   render() {
     const { selectedPage } = this.state
@@ -18,6 +20,7 @@ class App extends Component {
       <div>
         <BgSVG />
         {selectedPage === "" && <Main handlePage={this.handlePage} />}
+        {selectedPage === "message" && <Message handlePage={this.handlePage} />}
         {selectedPage === "bio" && <Bio handlePage={this.handlePage} />}
       </div>
     );

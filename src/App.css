@@ -32,6 +32,7 @@ body {
 .description {
   width: 50%;
   text-align: justify;
+  margin-bottom: 50px;
 }
 
 svg {
@@ -130,7 +131,8 @@ a {
 .home {
   position: inline-block;
   z-index:9;
-  width:32px;
+  width:50px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 900px) {
@@ -183,4 +185,50 @@ a {
 
 #linkedin {
   stroke: blue;
+}
+
+
+
+#right {
+  flex-direction: column;
+    height: 630px;
+    width: 320px;
+}
+
+.form {
+  margin: 40px;
+  position: absolute;
+}
+label {
+  color:  #c2c2c5;
+  display: block;
+  font-size: 14px;
+  height: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+input {
+  background: transparent;
+  border: 0;
+  color: #f2f2f2;
+  font-size: 20px;
+  height: 30px;
+  line-height: 30px;
+  width: 80%;
+  outline: none !important;
+}
+input::-moz-focus-inner { 
+  border: 0; 
+}
+#submit {
+  color: #707075;
+  margin-top: 40px;
+  transition: color 300ms;
+  text-align: center;
+}
+#submit:focus {
+  color: #f2f2f2;
+}
+#submit:active {
+  color: #d0d0d2;
 }

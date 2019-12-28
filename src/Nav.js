@@ -6,6 +6,7 @@ class Nav extends Component {
     anime({
       targets: [`#${id} .icontext`],
       opacity: 1,
+      translateY: [10, 0],
       color: "#00d5ff",
       easing: "easeOutExpo",
       duration: 1000
@@ -20,6 +21,7 @@ class Nav extends Component {
     anime({
       targets: [`#${id} .icontext`],
       opacity: 0,
+      translateY: [0, 10],
       easing: "easeOutExpo",
       duration: 1000
     });
@@ -77,7 +79,7 @@ class Nav extends Component {
         </a>
         
         <li style={{ width: "30px" }} id="email" onMouseEnter={() => this.reveal("email")}
-          onMouseLeave={() => this.hide("email")}>
+          onMouseLeave={() => this.hide("email")} onClick={() => this.props.handlePage("message")}>
           <svg height="30px" version="1.1" viewBox="0 0 24 24" width="30px">
             <g
               fill="none"
