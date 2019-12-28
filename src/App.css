@@ -41,7 +41,7 @@ svg {
 
 #svgcontainer {
   max-width: 220px;
-  min-width: 100px;
+  min-width: 200px;
 }
 
 .moetitle {
@@ -108,3 +108,27 @@ svg {
   width:32px;
 }
 
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 2em;
+    margin-left:11px;
+  }
+  .subtitle {
+    font-size: 0.7em;
+    margin-left: 5px;
+  }
+  .moetitle {
+    font-size:40px;
+  }
+  #svgcontainer {
+    width:200px;
+  }
+  .description {
+    margin-bottom:50px;
+    width: 80%;
+  }
+
+  #bio {
+    justify-content: space-evenly;
+  }
+}
