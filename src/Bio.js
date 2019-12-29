@@ -2,19 +2,15 @@ import React, { Component } from "react";
 import MoeSVG from "./MoeSVG";
 import HomeSVG from "./HomeSVG";
 import anime from "animejs/lib/anime.es.js";
+import nwm from "./companylogos/nwm.jpg"
+import citi from "./companylogos/citi.png"
+import ilww from "./companylogos/ilww.jpg"
 
 class Bio extends Component {
   state = {
-    pathLength: null,
-    path: null
+    pathLength: null
   };
   componentDidMount() {
-    const path = document.querySelector("#linepath");
-    const pathLength = path.getTotalLength();
-    this.setState({ pathLength: pathLength });
-    path.style.strokeDasharray = pathLength + " " + pathLength;
-    path.style.strokeDashoffset = pathLength;
-    window.addEventListener("scroll", this.handleScroll);
 
     const tl = anime.timeline({
       easing: "easeOutExpo"
@@ -34,7 +30,8 @@ class Bio extends Component {
           loop: false
         },
         200
-      )
+      ).add({ targets: ".logo", opacity: [0,1]})
+
       .add(
         {
           targets: ".cls-1",
@@ -46,7 +43,7 @@ class Bio extends Component {
           }
         },
         220
-      );
+      )
   }
   directHome = () => {
     const tl = anime.timeline({
@@ -71,19 +68,7 @@ class Bio extends Component {
     this.props.handlePage("");
   };
 
-  handleScroll = () => {
-    let scrollPercentage =
-      (document.documentElement.scrollTop + document.body.scrollTop) /
-      (document.documentElement.scrollHeight -
-        document.documentElement.clientHeight);
-    let drawLength = (100 * scrollPercentage) / 2;
-    anime({
-      targets: "#linepath",
-      strokeDashoffset: this.state.pathLength - drawLength,
-      easing: "linear",
-      duration: 4500
-    });
-  };
+ 
 
   render() {
     console.log(this.state.pathLength);
@@ -108,17 +93,75 @@ class Bio extends Component {
             <svg
               id="svglinetop"
               viewBox="0 0 100 60"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path id="linepath" d="M 0,0 v100" />
-            </svg>
-            <svg
-              id="svglinebottom"
-              viewBox="0 0 100 60"
+              width="1px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path id="fulllinepath" d="M 0,0 v100" />
             </svg>
+          </div>
+
+          <div id="timeline">
+            <div className="job-left">
+              <div className="info-left">
+                <h2>Financial Representative</h2>
+                <img src={nwm} class="logo" />
+                {/* Summary of description. */}
+              </div>
+              <div className="date-right">
+                <h5>Nov 2016 - May 2017</h5>
+              </div>
+            </div>
+
+            <div className="job-right">
+              <div className="date-left">
+                <h5>Jun 2017 - Feb 2018</h5>
+              </div>
+              <div className="info-right">
+                {" "}
+                <h2>Bank Teller II</h2>
+                <img src={citi} class="logo" style={{width: "60px"}} />
+              </div>
+            </div>
+
+            <div className="job-left">
+              <div className="info-left">
+                <h2>Cofounder & Executive Director of Marketing</h2>
+                
+              </div>
+              <div className="date-right">
+                <h5>Jan 2017 – May 2018</h5>
+              </div>
+            </div>
+
+            <div className="job-left">
+              <div className="info-left">
+                <h2>Cofounder & Treasurer</h2>
+              </div>
+              <div className="date-right">
+                <h5>Jan 2018 – May 2018</h5>
+              </div>
+            </div>
+
+            <div className="job-right">
+              <div className="date-left">
+                <h5>May 2018 - Dec 2018</h5>
+              </div>
+              <div className="info-right">
+                {" "}
+                <h2>Account Manager</h2>
+                <img src={ilww} class="logo" style={{width: "150px"}} />
+              </div>
+            </div>
+
+            <div className="job-left">
+              <div className="info-left">
+                <h2>Personal Banker</h2>
+                <img src={citi} class="logo" style={{width: "60px"}} />
+              </div>
+              <div className="date-right">
+                <h5>Dec 2018 - Present</h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>

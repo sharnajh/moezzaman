@@ -161,8 +161,7 @@ a:visited {
 
   #bio {
     justify-content: space-evenly;
-    height:auto;
-    
+    height: auto;
   }
 }
 
@@ -227,40 +226,99 @@ input::-moz-focus-inner {
   color: white;
   display: flex;
   justify-content: center;
-}
-
-#svglinebottom {
-  height: 100%;
-  width: auto;
+  height: 1200px;
 }
 
 #svglinetop {
   height: 100%;
   width: auto;
-  position: absolute;
 }
 
-#linepath{
+#linepath {
   fill: none;
   stroke: #00d5ff;
   stroke-width: 0.5px;
-  z-index:1;
+  z-index: 1;
+  stroke-linecap: round;
+  position: absolute;
 }
 
-#fulllinepath{
+#fulllinepath {
   fill: none;
   stroke: black;
   stroke-width: 0.5px;
-  z-index: 0,
+  z-index: 0;
+  stroke-linecap: round;
 }
 
 #linecontainer {
-  width: 0.5px;
-  height: 200vh;
-  margin:0;
-  
+  width: 1px;
+  height: auto;
+  margin: 0;
+  z-index: 0;
+}
+
+#timeline {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.job-left {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  width: 50%;
+  margin-right:21.5%;
+  margin-bottom:10px;
+  margin-top: 30px;
+}
+.job-right {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  width: 50%;
+  margin-left:22%;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.date-left {
+  float: left;
+  width: 25%;
+  padding:20px;
+  text-align: right;
+}
+
+.date-right {
+  float: right;
+  width: 25%;
+  padding:20px;
+}
+
+.info-left {
+  text-align: right;
+  float: left;
+  width: 75%;
+  padding:20px;
+}
+
+.info-right {
+  float: right;
+  width: 75%;
+  padding:20px;
 }
 
 #bio {
   height: auto;
+  overflow: hidden;
+}
+
+.logo {
+  width: 220px;
 }
