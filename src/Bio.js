@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import MoeSVG from "./MoeSVG";
 import HomeSVG from "./HomeSVG";
 import anime from "animejs/lib/anime.es.js";
-import Timeline from "./Timeline"
+import Timeline from "./Timeline";
 
 class Bio extends Component {
   state = {
@@ -28,7 +28,22 @@ class Bio extends Component {
         },
         200
       )
-      .add({ targets: ".logo", opacity: [0, 1] })
+      .add({
+        targets: ".timeline",
+        opacity: [0, 1],
+        translateY: [150, 0],
+        translateX: 0,
+        duration: 2000,
+        delay: (el, i) => 1000 + 100 * i
+      }, 250)
+      .add({
+        targets: ".timeline ul li",
+        opacity: [0, 1],
+        translateY: [150, 0],
+        translateX: 0,
+        duration: 4000,
+        delay: (el, i) => 1000 + 100 * i
+      }, 500)
 
       .add(
         {

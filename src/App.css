@@ -137,7 +137,7 @@ a:visited {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .title {
     font-size: 2em;
     margin-left: 11px;
@@ -147,10 +147,10 @@ a:visited {
     margin-left: 5px;
   }
   .moetitle {
-    font-size: 90px;
+    font-size: 60px;
   }
   #svgcontainer {
-    width: 130px;
+    width: 100px;
   }
   .description {
     margin-bottom: 50px;
@@ -163,11 +163,23 @@ a:visited {
     justify-content: space-evenly;
     height: auto;
   }
-}
-
-@media only screen and (max-width: 600px) {
-  .moetitle {
-    font-size: 40px;
+  #bio .timeline {
+    width: 100%;
+  }
+  #bio .timeline:before {
+    left: 20px;
+  }
+  #bio .timeline ul li:nth-child(odd),
+  #bio .timeline ul li:nth-child(even){
+    width: 100%;
+    text-align:left;
+    padding-left: 50px;
+    padding-bottom: 50px;
+  }
+  #bio .timeline ul li:nth-child(odd):before,
+  #bio .timeline ul li:nth-child(even):before{
+    top: 25px;
+    left: 15px;
   }
 }
 
@@ -234,6 +246,7 @@ input::-moz-focus-inner {
   padding-top: 0;
   margin: 0;
   overflow: hidden;
+  
 }
 
 .timeline:before {
@@ -242,7 +255,7 @@ input::-moz-focus-inner {
   left: 50%;
   width: 3px;
   height: 100%;
-  background-color: black;
+  background-color: #00d5ff;
 }
 
 .timeline ul {
@@ -282,9 +295,9 @@ input::-moz-focus-inner {
   right: -6px;
   width: 10px;
   height: 10px;
-  background-color: black;
+  background-color: white;
   border-radius: 50%;
-  box-shadow: 0 0 0 5px white;
+  box-shadow: 0 0 0 3px #00d5ff;;
 }
 
 .timeline ul li:nth-child(even):before {
@@ -294,9 +307,9 @@ input::-moz-focus-inner {
   left: -3px;
   width: 10px;
   height: 10px;
-  background-color: black;
+  background-color: white;
   border-radius: 50%;
-  box-shadow: 0 0 0 5px white;
+  box-shadow: 0 0 0 3px #00d5ff;;
 }
 
 .timeline ul li h3 {
@@ -313,10 +326,11 @@ input::-moz-focus-inner {
 
 .timeline ul li:nth-child(odd) .date {
   position: absolute;
-  top: -6px;
+  top: 0px;
   right: -210px;
   margin: 0;
-  padding: 8px 16px;
+  padding: 0px 16px;
+  color: #6e6e6e;
 }
 
 .timeline ul li:nth-child(even) .date {
@@ -325,6 +339,7 @@ input::-moz-focus-inner {
   left: -210px;
   margin: 0;
   padding: 8px 16px;
+  color: #6e6e6e;
 }
 
 .logo {

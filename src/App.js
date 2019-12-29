@@ -7,7 +7,7 @@ import Message from "./Message"
 
 class App extends Component {
   state = {
-    selectedPage: "bio"
+    selectedPage: ""
   }
   handlePage = (e) => {
     this.setState({ selectedPage: e })
