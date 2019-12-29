@@ -1,6 +1,6 @@
 #MoeZzaman.com
 
-![Website]("./web.gif")
+![Website]("web.gif")
 
 ## Available Scripts
 
