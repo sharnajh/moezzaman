@@ -11,7 +11,7 @@ class Message extends Component {
   };
   setEmail = e => {
     e.preventDefault();
-    const text = (e.target.value).trim()
+    const text = e.target.value.trim();
     this.setState({ email: text });
   };
   setMessage = e => {
@@ -20,13 +20,13 @@ class Message extends Component {
   };
   submitForm = e => {
     e.preventDefault();
-    const { email, message } = this.state
+    const { email, message } = this.state;
     if (email.includes("@") === false || email === "") {
-      alert("Please include a valid email address.")
+      alert("Please include a valid email address.");
     } else if (message === "") {
-      alert("Please include a message")
+      alert("Please include a message");
     } else {
-      alert("Your message has been sent.")
+      alert("Your message has been sent.");
     }
   };
   setAnimation = x => {
@@ -79,17 +79,21 @@ class Message extends Component {
     return (
       <div className="section">
         <HomeSVG handlePage={this.props.handlePage} color={"#fff"} />
-        <h1
+    
+        <h3
           style={{
-            zIndex: 90,
+            zIndex: "1",
+            display: "block",
             color: "#fff",
             margin: "0",
-            marginTop: "100px",
-            padding: "0"
+            padding: "0",
+            textAlign: "center"
           }}
         >
-          Contact Moe
-        </h1>
+          Contact Moe at
+          <br />
+          moezzaman3@gmail.com
+        </h3>
         <div id="formcontainer">
           <SnakeSVG />
           <div className="form">
@@ -111,12 +115,32 @@ class Message extends Component {
             />
             <input
               onFocus={() => this.setAnimation("submit")}
-              onClick={(e) => this.submitForm(e)}
+              onClick={e => this.submitForm(e)}
               type="submit"
               id="submit"
             ></input>
           </div>
         </div>
+        <h3
+          style={{
+            zIndex: 90,
+            color: "#fff",
+            margin: "0",
+            padding: "0",
+            textAlign: "center",
+            marginBottom: "20px"
+          }}
+        >
+          or connect with him
+          <br /> on{" "}
+          <a
+            href="https://www.linkedin.com/in/mohammed-asaduzzaman/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+          .
+        </h3>
       </div>
     );
   }

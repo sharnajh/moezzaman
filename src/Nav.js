@@ -53,7 +53,7 @@ class Nav extends Component {
               fill="#fff"
             />
           </svg>
-          <div className="icontext">Bio</div>
+          <div className="icontext">About</div>
         </li>
         <a href="https://www.linkedin.com/in/mohammed-asaduzzaman/" target="_blank"><li style={{ width: "30px" }} id="linked" onMouseEnter={() => this.reveal("linked")}
           onMouseLeave={() => this.hide("linked")}>

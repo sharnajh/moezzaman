@@ -4,7 +4,18 @@ import HomeSVG from "./HomeSVG";
 import anime from "animejs/lib/anime.es.js";
 
 class Bio extends Component {
+  state = {
+    pathLength: null,
+    path: null
+  };
   componentDidMount() {
+    const path = document.querySelector("#linepath");
+    const pathLength = path.getTotalLength();
+    this.setState({ pathLength: pathLength });
+    path.style.strokeDasharray = pathLength + " " + pathLength;
+    path.style.strokeDashoffset = pathLength;
+    window.addEventListener("scroll", this.handleScroll);
+
     const tl = anime.timeline({
       easing: "easeOutExpo"
     });
@@ -17,7 +28,7 @@ class Bio extends Component {
         {
           targets: ".polymorph",
           fill: "#000",
-          points: [{ value: "215,110 0,110 195,95 215,0" }],
+          points: [{ value: "215,110 0,110 215,110 215,0" }],
           easing: "easeOutQuad",
           duration: 900,
           loop: false
@@ -59,13 +70,26 @@ class Bio extends Component {
     );
     this.props.handlePage("");
   };
+
+  handleScroll = () => {
+    let scrollPercentage =
+      (document.documentElement.scrollTop + document.body.scrollTop) /
+      (document.documentElement.scrollHeight -
+        document.documentElement.clientHeight);
+    let drawLength = (100 * scrollPercentage) / 2;
+    anime({
+      targets: "#linepath",
+      strokeDashoffset: this.state.pathLength - drawLength,
+      easing: "linear",
+      duration: 4500
+    });
+  };
+
   render() {
+    console.log(this.state.pathLength);
     return (
       <div className="section" id="bio">
-        <HomeSVG
-          directHome={this.directHome}
-          color="#000"
-        />
+        <HomeSVG directHome={this.directHome} color="#000" />
         <div className="moetivation">
           <h1 className="moetitle">#</h1>
           <div id="svgcontainer">
@@ -74,11 +98,29 @@ class Bio extends Component {
           <h1 className="moetitle">TIVATE</h1>
         </div>
         <p className="description">
-          Mohammed was born in Sylhet, Bangladesh in '96, and shortly thereafter
-          he and his family replanted their roots in New York City. In 2018, he
-          graduated from Baruch College's Zicklin School of Business with a BBA
-          in Finance.
+          Mohammed "Moe" Asaduzzaman was born in Sylhet, Bangladesh in '96, and
+          shortly thereafter he and his family repotted their roots in New York
+          City. His life maxim is to manifest motivation and motivate others to
+          pursue what brings them happiness.
         </p>
+        <div id="experience-container">
+          <div id="linecontainer">
+            <svg
+              id="svglinetop"
+              viewBox="0 0 100 60"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path id="linepath" d="M 0,0 v100" />
+            </svg>
+            <svg
+              id="svglinebottom"
+              viewBox="0 0 100 60"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path id="fulllinepath" d="M 0,0 v100" />
+            </svg>
+          </div>
+        </div>
       </div>
     );
   }

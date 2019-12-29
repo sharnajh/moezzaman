@@ -15,7 +15,6 @@ body {
 #bgcontainer {
   z-index: 0;
   position: absolute;
-  overflow: hidden;
   width: 100vw;
   height: 100vh;
 }
@@ -29,7 +28,7 @@ body {
 }
 
 .description {
-  width: 50%;
+  width: 60%;
   text-align: justify;
   margin-bottom: 50px;
 }
@@ -40,12 +39,12 @@ svg {
 }
 
 #svgcontainer {
-  max-width: 220px;
-  min-width: 200px;
+  max-width: 200px;
+  min-width: 100px;
 }
 
 .moetitle {
-  font-size: 150px;
+  font-size: 120px;
 }
 
 .moetivation {
@@ -60,7 +59,7 @@ svg {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  position: relative;
 }
 
 .title {
@@ -110,6 +109,11 @@ svg {
 
 a {
   text-decoration: none;
+  color: #00d5ff;
+}
+
+a:visited {
+  color: #00d5ff;
 }
 
 #nav li {
@@ -146,7 +150,7 @@ a {
     font-size: 90px;
   }
   #svgcontainer {
-    width: 200px;
+    width: 130px;
   }
   .description {
     margin-bottom: 50px;
@@ -157,6 +161,8 @@ a {
 
   #bio {
     justify-content: space-evenly;
+    height:auto;
+    
   }
 }
 
@@ -166,14 +172,12 @@ a {
   }
 }
 
-
 #formcontainer {
   height: 630px;
   width: 320px;
-  display: block;
-  border: 1px blue solid;
   overflow: hidden;
   margin-left: 10px;
+  margin-top: 0px;
 }
 
 .form {
@@ -216,4 +220,47 @@ input::-moz-focus-inner {
 }
 #submit:active {
   color: #d0d0d2;
+}
+
+#experience-container {
+  width: 100vw;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#svglinebottom {
+  height: 100%;
+  width: auto;
+}
+
+#svglinetop {
+  height: 100%;
+  width: auto;
+  position: absolute;
+}
+
+#linepath{
+  fill: none;
+  stroke: #00d5ff;
+  stroke-width: 0.5px;
+  z-index:1;
+}
+
+#fulllinepath{
+  fill: none;
+  stroke: black;
+  stroke-width: 0.5px;
+  z-index: 0,
+}
+
+#linecontainer {
+  width: 0.5px;
+  height: 200vh;
+  margin:0;
+  
+}
+
+#bio {
+  height: auto;
 }
