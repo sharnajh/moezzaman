@@ -163,26 +163,8 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
-  .title {
-    font-size: 2em;
-    margin-left:11px;
-  }
-  .subtitle {
-    font-size: 0.7em;
-    margin-left: 5px;
-  }
   .moetitle {
     font-size:40px;
-  }
-  #svgcontainer {
-    width:200px;
-  }
-  .description {
-    margin-bottom:50px;
-  }
-
-  #bio {
-    justify-content: space-evenly;
   }
 }
 
