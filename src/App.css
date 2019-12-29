@@ -29,8 +29,8 @@ body {
 
 .description {
   width: 60%;
-  text-align: justify;
   margin-bottom: 50px;
+  line-height: 1.5;
 }
 
 svg {
@@ -321,7 +321,8 @@ input::-moz-focus-inner {
 .timeline ul li p {
   margin: 10px 0 0;
   padding: 0;
-  text-align: justify;
+  
+  line-height: 1.5;
 }
 
 .timeline ul li:nth-child(odd) .date {

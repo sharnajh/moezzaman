@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import nwm from "./companylogos/nwm.jpg";
 import citi from "./companylogos/citi.png";
 import ilww from "./companylogos/ilww.jpg";
+import flc from "./companylogos/flc.jpg";
 
 class Timeline extends Component {
   render() {
@@ -82,6 +83,7 @@ class Timeline extends Component {
                 <br /> • Maintained a system of policies to sustain a system of
                 checks and balances between the club and Student Government.
               </p>
+              <img src={flc} className="logo" style={{ width: "150px"}} />
             </div>
           </li>
           <li>
