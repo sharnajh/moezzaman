@@ -170,16 +170,22 @@ a:visited {
     left: 20px;
   }
   #bio .timeline ul li:nth-child(odd),
-  #bio .timeline ul li:nth-child(even){
+  #bio .timeline ul li:nth-child(even) {
     width: 100%;
-    text-align:left;
+    text-align: left;
     padding-left: 50px;
     padding-bottom: 50px;
   }
   #bio .timeline ul li:nth-child(odd):before,
-  #bio .timeline ul li:nth-child(even):before{
+  #bio .timeline ul li:nth-child(even):before {
     top: 25px;
     left: 15px;
+  }
+  #bio .timeline ul li:nth-child(odd) .date,
+  #bio .timeline ul li:nth-child(even) .date {
+    top: -25px;
+    left: 35px;
+    right: inherit;
   }
 }
 
@@ -238,7 +244,6 @@ input::-moz-focus-inner {
   overflow: hidden;
 }
 
-
 .timeline {
   width: 100vw;
   display: block;
@@ -246,11 +251,10 @@ input::-moz-focus-inner {
   padding-top: 0;
   margin: 0;
   overflow: hidden;
-  
 }
 
 .timeline:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   width: 3px;
@@ -261,7 +265,6 @@ input::-moz-focus-inner {
 .timeline ul {
   margin: 0;
   padding: 0;
-
 }
 
 .timeline ul li {
@@ -289,7 +292,7 @@ input::-moz-focus-inner {
 }
 
 .timeline ul li:nth-child(odd):before {
-  content: '';
+  content: "";
   position: absolute;
   top: 26px;
   right: -6px;
@@ -297,11 +300,11 @@ input::-moz-focus-inner {
   height: 10px;
   background-color: white;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px #00d5ff;;
+  box-shadow: 0 0 0 3px #00d5ff;
 }
 
 .timeline ul li:nth-child(even):before {
-  content: '';
+  content: "";
   position: absolute;
   top: 26px;
   left: -3px;
@@ -309,7 +312,7 @@ input::-moz-focus-inner {
   height: 10px;
   background-color: white;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px #00d5ff;;
+  box-shadow: 0 0 0 3px #00d5ff;
 }
 
 .timeline ul li h3 {
@@ -321,7 +324,7 @@ input::-moz-focus-inner {
 .timeline ul li p {
   margin: 10px 0 0;
   padding: 0;
-  
+
   line-height: 1.5;
 }
 

@@ -36,14 +36,14 @@ class Bio extends Component {
         duration: 2000,
         delay: (el, i) => 1000 + 100 * i
       }, 250)
-      .add({
-        targets: ".timeline ul li",
-        opacity: [0, 1],
-        translateY: [150, 0],
-        translateX: 0,
-        duration: 4000,
-        delay: (el, i) => 1000 + 100 * i
-      }, 500)
+      // .add({
+      //   targets: ".timeline ul li",
+      //   opacity: [0, 1],
+      //   translateY: [150, 0],
+      //   translateX: 0,
+      //   duration: 4000,
+      //   delay: (el, i) => 1000 + 100 * i
+      // }, 500)
 
       .add(
         {

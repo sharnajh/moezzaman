@@ -1,15 +1,27 @@
 import React, { Component } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+// Image Imports
 import nwm from "./companylogos/nwm.jpg";
 import citi from "./companylogos/citi.png";
 import ilww from "./companylogos/ilww.jpg";
 import flc from "./companylogos/flc.jpg";
+import baruch from "./companylogos/baruch.png";
+
+AOS.init();
 
 class Timeline extends Component {
   render() {
     return (
       <div className="timeline">
         <ul>
-          <li>
+          <li
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+          >
             <div className="content">
               <h3>Financial Representative</h3>
               <p>
@@ -34,7 +46,13 @@ class Timeline extends Component {
               <h4>Nov 2016 - May 2017</h4>
             </div>
           </li>
-          <li>
+          <li
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+            data-aos-anchor-placement="top-center"
+          >
             <div className="content">
               <h3>Bank Teller II</h3>
               <p>
@@ -54,7 +72,13 @@ class Timeline extends Component {
               <h4>Jun 2017 - Feb 2018</h4>
             </div>
           </li>
-          <li>
+          <li
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+            data-aos-anchor-placement="top-center"
+          >
             <div className="content">
               <h3>Cofounder & Executive Director of Marketing</h3>
               <p>
@@ -83,10 +107,34 @@ class Timeline extends Component {
                 <br /> • Maintained a system of policies to sustain a system of
                 checks and balances between the club and Student Government.
               </p>
-              <img src={flc} className="logo" style={{ width: "150px"}} />
+              <img src={flc} className="logo" style={{ width: "150px" }} />
             </div>
           </li>
-          <li>
+          <li
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+          >
+            <div className="content">
+              <h3>Graduated from Baruch College</h3>
+              <p>
+                Bachelor of Business Administration (B.B.A), Finance from Baruch
+                College, Zicklin School of Business.
+              </p>
+              <img src={baruch} className="logo" style={{ width: "250px" }} />
+            </div>
+            <div className="date">
+              <h4>Sep 2016 - May 2018</h4>
+            </div>
+          </li>
+          <li
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+            data-aos-anchor-placement="top-center"
+          >
             <div className="content">
               <h3>Account Manager</h3>
               <p>
@@ -111,27 +159,35 @@ class Timeline extends Component {
               <h4>May 2018 - Dec 2018</h4>
             </div>
           </li>
-          <li>
+          <li
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+            data-aos-anchor-placement="top-center"
+          >
             <div className="content">
               <h3>Personal Banker</h3>
               <p>
                 • Develop and deepen the client relationship through
                 understanding the client's lifestyle based on family,
                 occupation, future plans, and goals to provide solutions to the
-                client expressed and unexpressed needs.<br /> • Actively manage a book
-                of business consisting of 200+ clients to review banking
-                relationships and provide logistical propositions for short,
-                current, and future term financial goals.<br /> • Knowledgeable in all
-                aspects of KYC and AML regulations for account opening;
-                Streamlined opening consumer and business accounts by using
-                Citi’s KYC and AML protocols make the client onboarding
-                experience smooth and efficient.<br /> • Conduct quarterly audits on
-                accounts and branch paperwork to make sure all items are in
-                compliance with the bank policies. <br />• Established over
-                $7,000,000+ in net new balances and $5,000,000+ in investment
-                referrals to the wealth management division between consumer and
-                business accounts, adding myself to the top 5 percent tile
-                within the Manhattan Square area (President’s Club).
+                client expressed and unexpressed needs.
+                <br /> • Actively manage a book of business consisting of 200+
+                clients to review banking relationships and provide logistical
+                propositions for short, current, and future term financial
+                goals.
+                <br /> • Knowledgeable in all aspects of KYC and AML regulations
+                for account opening; Streamlined opening consumer and business
+                accounts by using Citi’s KYC and AML protocols make the client
+                onboarding experience smooth and efficient.
+                <br /> • Conduct quarterly audits on accounts and branch
+                paperwork to make sure all items are in compliance with the bank
+                policies. <br />• Established over $7,000,000+ in net new
+                balances and $5,000,000+ in investment referrals to the wealth
+                management division between consumer and business accounts,
+                adding myself to the top 5 percent tile within the Manhattan
+                Square area (President’s Club).
               </p>
               <img src={citi} className="logo" style={{ width: "120px" }} />
             </div>
