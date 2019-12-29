@@ -3,9 +3,6 @@ import MoeSVG from "./MoeSVG";
 import HomeSVG from "./HomeSVG";
 import anime from "animejs/lib/anime.es.js";
 import Timeline from "./Timeline"
-import nwm from "./companylogos/nwm.jpg";
-import citi from "./companylogos/citi.png";
-import ilww from "./companylogos/ilww.jpg";
 
 class Bio extends Component {
   state = {

@@ -326,3 +326,7 @@ input::-moz-focus-inner {
   margin: 0;
   padding: 8px 16px;
 }
+
+.logo {
+  padding: 20px;
+}

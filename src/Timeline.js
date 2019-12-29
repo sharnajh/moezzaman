@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import nwm from "./companylogos/nwm.jpg";
+import citi from "./companylogos/citi.png";
+import ilww from "./companylogos/ilww.jpg";
 
 class Timeline extends Component {
   render() {
@@ -24,6 +27,7 @@ class Timeline extends Component {
                 product, the benefits, and the premium accumulation throughout
                 the maturity of the plan.
               </p>
+              <img src={nwm} className="logo" style={{ width: "250px" }} />
             </div>
             <div className="date">
               <h4>Nov 2016 - May 2017</h4>
@@ -43,6 +47,7 @@ class Timeline extends Component {
                 cash drawers, handling night deposits, and correcting
                 discrepancies.
               </p>
+              <img src={citi} className="logo" style={{ width: "120px" }} />
             </div>
             <div className="date">
               <h4>Jun 2017 - Feb 2018</h4>
@@ -98,6 +103,7 @@ class Timeline extends Component {
                 outsource luxury ground transportation trips in order to fulfill
                 demand.
               </p>
+              <img src={ilww} className="logo" style={{ width: "250px" }} />
             </div>
             <div className="date">
               <h4>May 2018 - Dec 2018</h4>
@@ -125,6 +131,7 @@ class Timeline extends Component {
                 business accounts, adding myself to the top 5 percent tile
                 within the Manhattan Square area (President’s Club).
               </p>
+              <img src={citi} className="logo" style={{ width: "120px" }} />
             </div>
             <div className="date">
               <h4>Dec 2018 - Present</h4>
