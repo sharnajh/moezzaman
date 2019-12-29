@@ -153,6 +153,9 @@ a {
   .description {
     margin-bottom:50px;
   }
+  #nav {
+    margin-left: -23px;
+  }
 
   #bio {
     justify-content: space-evenly;
