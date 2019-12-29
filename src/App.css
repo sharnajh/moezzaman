@@ -12,7 +12,6 @@ body {
   stroke-width: 4px;
 }
 
-
 #bgcontainer {
   z-index: 0;
   position: absolute;
@@ -49,8 +48,6 @@ svg {
   font-size: 150px;
 }
 
-
-
 .moetivation {
   display: flex;
   align-items: center;
@@ -63,6 +60,7 @@ svg {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .title {
@@ -72,7 +70,7 @@ svg {
   letter-spacing: 0.5em;
   cursor: pointer;
   margin: 0;
-  color:white;
+  color: white;
 }
 
 .subtitle {
@@ -98,15 +96,15 @@ svg {
 #nav {
   display: flex;
   position: absolute;
-  margin-top:80px;
+  margin-top: 100px;
   font-weight: 200;
   font-size: 1em;
   margin-left: -15px;
   list-style-type: none;
-  margin-left:-40px;
+  margin-left: -40px;
   align-items: center;
   justify-content: space-between;
-  width:120px;
+  width: 120px;
   color: white;
 }
 
@@ -119,7 +117,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin:0px;
+  margin: 0px;
   cursor: pointer;
 }
 
@@ -130,28 +128,28 @@ a {
 
 .home {
   position: inline-block;
-  z-index:9;
-  width:50px;
+  z-index: 9;
+  width: 50px;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 900px) {
   .title {
     font-size: 2em;
-    margin-left:11px;
+    margin-left: 11px;
   }
   .subtitle {
     font-size: 0.7em;
     margin-left: 5px;
   }
   .moetitle {
-    font-size:90px;
+    font-size: 90px;
   }
   #svgcontainer {
-    width:200px;
+    width: 200px;
   }
   .description {
-    margin-bottom:50px;
+    margin-bottom: 50px;
   }
   #nav {
     margin-left: -23px;
@@ -164,24 +162,29 @@ a {
 
 @media only screen and (max-width: 600px) {
   .moetitle {
-    font-size:40px;
+    font-size: 40px;
   }
 }
 
 
-
-#right {
-  flex-direction: column;
-    height: 630px;
-    width: 320px;
+#formcontainer {
+  height: 630px;
+  width: 320px;
+  display: block;
+  border: 1px blue solid;
+  overflow: hidden;
+  margin-left: 10px;
 }
 
 .form {
   margin: 40px;
+  height: 302px;
+  width: 320px;
   position: absolute;
+  overflow: hidden;
 }
 label {
-  color:  #c2c2c5;
+  color: #c2c2c5;
   display: block;
   font-size: 14px;
   height: 16px;
@@ -195,17 +198,18 @@ input {
   font-size: 20px;
   height: 30px;
   line-height: 30px;
-  width: 80%;
+  width: 75%;
   outline: none !important;
 }
-input::-moz-focus-inner { 
-  border: 0; 
+input::-moz-focus-inner {
+  border: 0;
 }
 #submit {
   color: #707075;
   margin-top: 40px;
   transition: color 300ms;
   text-align: center;
+  cursor: pointer;
 }
 #submit:focus {
   color: #f2f2f2;
