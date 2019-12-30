@@ -115,6 +115,8 @@ class Timeline extends Component {
             data-aos-duration="1200"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
+            data-aos-anchor-placement="top-center"
+            data-aos-offset="50"
           >
             <div className="content">
               <h3>Graduated from Baruch College</h3>

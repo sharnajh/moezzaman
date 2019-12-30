@@ -7,7 +7,6 @@ class Message extends Component {
   render() {
     return (
       <div className="section" style={{ alignItems: "space-between" }}>
-        <HomeSVG handlePage={this.props.handlePage} color={"#fff"} />
         <h3
           style={{
             zIndex: "1",

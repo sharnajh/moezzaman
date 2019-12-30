@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MoeSVG from "./MoeSVG";
-import HomeSVG from "./HomeSVG";
+import NavBar from "./NavBar"
 import anime from "animejs/lib/anime.es.js";
 import Timeline from "./Timeline";
 
@@ -36,14 +36,6 @@ class Bio extends Component {
         duration: 2000,
         delay: (el, i) => 1000 + 100 * i
       }, 250)
-      // .add({
-      //   targets: ".timeline ul li",
-      //   opacity: [0, 1],
-      //   translateY: [150, 0],
-      //   translateX: 0,
-      //   duration: 4000,
-      //   delay: (el, i) => 1000 + 100 * i
-      // }, 500)
 
       .add(
         {
@@ -58,36 +50,12 @@ class Bio extends Component {
         220
       );
   }
-  directHome = () => {
-    const tl = anime.timeline({
-      easing: "easeOutExpo"
-    });
-    tl.add(
-      {
-        targets: "#bio",
-        opacity: [1, 0],
-        easing: "easeOutExpo",
-        duration: 1000
-      },
-      0
-    ).add(
-      {
-        targets: ".polymorph",
-        points: [{ value: "215,110 0,110 0,0 215,0" }],
-        duration: 1500
-      },
-      0
-    );
-    this.props.handlePage("");
-  };
 
   render() {
     console.log(this.state.pathLength);
     return (
-      <div className="section" id="bio">
-        <HomeSVG directHome={this.directHome} color="#000" />
+      <div id="bio">
         <div className="moetivation">
-          <h1 className="moetitle">#</h1>
           <div id="svgcontainer">
             <MoeSVG />
           </div>

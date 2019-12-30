@@ -16,11 +16,12 @@ body {
   z-index: 0;
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
+  bottom: 0;
 }
 
 #bgsvg {
-  height: 100vh;
+  height: 90vh;
 }
 
 .polymorph {
@@ -28,7 +29,7 @@ body {
 }
 
 .description {
-  width: 60%;
+  width: 70%;
   margin-bottom: 50px;
   line-height: 1.5;
 }
@@ -44,7 +45,8 @@ svg {
 }
 
 .moetitle {
-  font-size: 120px;
+  font-size: 130px;
+  letter-spacing: 0.2ch;
 }
 
 .moetivation {
@@ -54,12 +56,15 @@ svg {
 
 .section {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
+  color: white;
+  background-color: black;
 }
 
 .title {
@@ -133,7 +138,8 @@ a:visited {
 .home {
   position: inline-block;
   z-index: 9;
-  width: 50px;
+  width: 45px;
+  height: 45px;
   cursor: pointer;
 }
 
@@ -147,10 +153,10 @@ a:visited {
     margin-left: 5px;
   }
   .moetitle {
-    font-size: 60px;
+    font-size: 70px;
   }
   #svgcontainer {
-    width: 100px;
+    width: 115px;
   }
   .description {
     margin-bottom: 50px;
@@ -162,6 +168,7 @@ a:visited {
   #bio {
     justify-content: space-evenly;
     height: auto;
+    margin-top: 20px;
   }
   #bio .timeline {
     width: 100%;
@@ -242,6 +249,13 @@ input::-moz-focus-inner {
 #bio {
   height: auto !important;
   overflow: hidden;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 20px;
+  padding-top: 40px;
 }
 
 .timeline {
@@ -349,3 +363,30 @@ input::-moz-focus-inner {
 .logo {
   padding: 20px;
 }
+
+.navbar {
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  font-size: 13px;
+}
+
+.navbar p {
+  margin: 25px;
+  letter-spacing: 0.2ch;
+  cursor: pointer;
+}
+
+.navbar p:hover {
+  color: #00d5ff;
+}
+

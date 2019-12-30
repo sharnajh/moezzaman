@@ -102,7 +102,7 @@ class Nav extends Component {
               </g>
             </g>
           </svg>
-          <div className="icontext">Message</div>
+          <div className="icontext">Contact</div>
         </li>
       </ul>
     );
