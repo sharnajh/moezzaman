@@ -373,20 +373,36 @@ input::-moz-focus-inner {
   height: 10vh;
   display: flex;
   flex-direction: row;
-  padding: 5px;
   position: fixed;
   top: 0;
   z-index: 3;
   font-size: 13px;
 }
 
-.navbar p {
+.navItem {
   margin: 25px;
   letter-spacing: 0.2ch;
   cursor: pointer;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  color: white;
 }
 
-.navbar p:hover {
-  color: #00d5ff;
+#about:after, #contact:after {
+  content: "";
+  background-color: #00d5ff;
+  position: absolute;
+  height: 4px;
+  width: 0px;
+  margin-top:28px;
+  transition: width .25s;
 }
 
+#about:hover:after, #contact:hover:after {
+  width: 60px;
+}

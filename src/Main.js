@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import anime from "animejs/lib/anime.es.js";
-import Nav from "./Nav";
-import Message from "./Message";
 
 class Main extends Component {
   componentDidMount() {
@@ -48,6 +46,7 @@ class Main extends Component {
     const zzaman = "ZZAMAN".split("");
     const mohammed = "MOHAMMED".split("");
     const asaduzzaman = "ASADUZZAMAN".split("");
+    
     return (
       <div>
         <div className="section">

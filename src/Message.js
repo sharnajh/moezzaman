@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import MessageForm from "./MessageForm";
-import HomeSVG from "./HomeSVG";
-import MoPic from "./MoPic.png";
 
 class Message extends Component {
   render() {

@@ -1,19 +1,26 @@
 import React, { Component } from "react";
 import HomeSVG from "./HomeSVG";
-import AboutSVG from "./AboutSVG";
-import ContactSVG from "./ContactSVG";
+import { Link } from "react-router-dom";
 
 class NavBar extends Component {
   render() {
     return (
       <div className="navbar">
-          <p onClick={() => this.props.handlePage("bio")}>About</p>
-        <HomeSVG
-          selectedPage={this.props.selectedPage}
-          handlePage={this.props.handlePage}
-          color="#fff"
-        />
-        <p onClick={() => this.props.handlePage("message")}>Contact</p>
+        <Link to="/about">
+          <div className="navItem" id="about">
+            About
+          </div>
+        </Link>
+        <Link to="/">
+          <div className="navItem">
+            <HomeSVG color="#fff" />
+          </div>
+        </Link>
+        <Link to="/contact">
+          <div className="navItem" id="contact">
+            Contact
+          </div>
+        </Link>
       </div>
     );
   }

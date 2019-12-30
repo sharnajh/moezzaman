@@ -52,7 +52,6 @@ class Bio extends Component {
   }
 
   render() {
-    console.log(this.state.pathLength);
     return (
       <div id="bio">
         <div className="moetivation">
