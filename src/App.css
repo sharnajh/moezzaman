@@ -410,6 +410,21 @@ input::-moz-focus-inner {
   width: 60px;
 }
 
+#aboutSelected, #contactSelected {
+  color: #00d5ff;
+  transition: color 1s;
+}
+
+#aboutSelected:after, #contactSelected:after {
+  content: "";
+  background-color: #00d5ff;
+  position: fixed;
+  height: 2px;
+  width: 60px;
+  margin-top:29px;
+  transition: width 1s;
+}
+
 
 .midnav {
   display: flex;

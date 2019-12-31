@@ -20,7 +20,7 @@ class HomeSVG extends Component {
       duration: 1000
     });
   };
- 
+
   directHome = () => {
     const tl = anime.timeline({
       easing: "easeOutExpo"
@@ -43,6 +43,7 @@ class HomeSVG extends Component {
     );
   };
   render() {
+    const { location } = this.props;
     return (
       <div
         className="home"
@@ -50,7 +51,7 @@ class HomeSVG extends Component {
         onMouseLeave={() => this.hide()}
       >
         <svg
-          fill="#fff"
+          fill={location.pathname === "/" ? "#00d5ff" : "#fff"}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-10 -10 46 46"
           id="house"

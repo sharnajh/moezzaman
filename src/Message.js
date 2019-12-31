@@ -13,6 +13,11 @@ class Message extends Component {
       },
       0
     )
+    anime({
+      targets: ".section",
+      opacity: [0,1],
+      duration: 5000
+    }, 1500)
   }
   render() {
     return (
