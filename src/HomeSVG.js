@@ -3,11 +3,10 @@ import anime from "animejs/lib/anime.es.js";
 
 class HomeSVG extends Component {
   reveal = () => {
-    const { color } = this.props;
     anime({
       targets: "#homecirque",
       strokeDashoffset: [anime.setDashoffset, 0],
-      stroke: color,
+      stroke: "#00d5ff",
       easing: "easeOutExpo",
       duration: 1000
     });
@@ -44,7 +43,6 @@ class HomeSVG extends Component {
     );
   };
   render() {
-    const { color } = this.props;
     return (
       <div
         className="home"
@@ -63,7 +61,7 @@ class HomeSVG extends Component {
             cx="16"
             cy="17"
             r="18"
-            stroke-width="2"
+            strokeWidth="2"
             fill="none"
           />
         </svg>

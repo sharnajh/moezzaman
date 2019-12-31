@@ -17,6 +17,14 @@ class Main extends Component {
       },
       0
     )
+    .add(
+      {
+        targets: ".polymorph",
+        points: [{ value: "215,110 0,110 0,0 215,0" }],
+        duration: 1500
+      },
+      0
+    )
       .add(
         {
           targets: ".subtitle .letter",
@@ -27,18 +35,6 @@ class Main extends Component {
         },
         1500
       )
-      .add(
-        {
-          targets: "#nav .wop",
-          opacity: [0, 1],
-          translateY: [150, 0],
-          translateX: 0,
-          color: "#fff",
-          duration: 4000,
-          delay: (el, i) => 1000 + 100 * i
-        },
-        2000
-      );
   }
   render() {
     // Name Strings
@@ -76,7 +72,7 @@ class Main extends Component {
                 ))}
                 <br />
               </h2>
-       
+                  {/* <p>Finance | New York City | moezzaman3@gmail.com</p> */}
             </div>
         </div>
 

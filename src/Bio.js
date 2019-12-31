@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import MoeSVG from "./MoeSVG";
-import NavBar from "./NavBar"
 import anime from "animejs/lib/anime.es.js";
 import Timeline from "./Timeline";
 

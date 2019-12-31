@@ -40,7 +40,7 @@ class Timeline extends Component {
                 product, the benefits, and the premium accumulation throughout
                 the maturity of the plan.
               </p>
-              <img src={nwm} className="logo" style={{ width: "250px" }} />
+              <img src={nwm} className="logo" style={{ width: "250px" }} alt="logo" />
             </div>
             <div className="date">
               <h4>Nov 2016 - May 2017</h4>
@@ -66,7 +66,7 @@ class Timeline extends Component {
                 cash drawers, handling night deposits, and correcting
                 discrepancies.
               </p>
-              <img src={citi} className="logo" style={{ width: "120px" }} />
+              <img src={citi} className="logo" style={{ width: "120px" }} alt="logo" />
             </div>
             <div className="date">
               <h4>Jun 2017 - Feb 2018</h4>
@@ -107,7 +107,7 @@ class Timeline extends Component {
                 <br /> • Maintained a system of policies to sustain a system of
                 checks and balances between the club and Student Government.
               </p>
-              <img src={flc} className="logo" style={{ width: "150px" }} />
+              <img src={flc} className="logo" style={{ width: "150px" }} alt="logo" />
             </div>
           </li>
           <li
@@ -124,7 +124,7 @@ class Timeline extends Component {
                 Bachelor of Business Administration (B.B.A), Finance from Baruch
                 College, Zicklin School of Business.
               </p>
-              <img src={baruch} className="logo" style={{ width: "250px" }} />
+              <img src={baruch} className="logo" style={{ width: "250px" }} alt="logo" />
             </div>
             <div className="date">
               <h4>Sep 2016 - May 2018</h4>
@@ -155,7 +155,7 @@ class Timeline extends Component {
                 outsource luxury ground transportation trips in order to fulfill
                 demand.
               </p>
-              <img src={ilww} className="logo" style={{ width: "250px" }} />
+              <img src={ilww} className="logo" style={{ width: "250px" }} alt="logo" />
             </div>
             <div className="date">
               <h4>May 2018 - Dec 2018</h4>
@@ -191,7 +191,7 @@ class Timeline extends Component {
                 adding myself to the top 5 percent tile within the Manhattan
                 Square area (President’s Club).
               </p>
-              <img src={citi} className="logo" style={{ width: "120px" }} />
+              <img src={citi} className="logo" style={{ width: "120px" }} alt="logo" />
             </div>
             <div className="date">
               <h4>Dec 2018 - Present</h4>

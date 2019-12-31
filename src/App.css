@@ -13,7 +13,6 @@ body {
 }
 
 #bgcontainer {
-  z-index: 0;
   position: absolute;
   width: 100vw;
   height: 90vh;
@@ -64,7 +63,6 @@ svg {
   align-items: center;
   position: absolute;
   color: white;
-  background-color: black;
 }
 
 .title {
@@ -83,7 +81,6 @@ svg {
   text-transform: uppercase;
   letter-spacing: 0.8em;
   color: white;
-  margin-left: -15px;
   text-align: center;
 }
 
@@ -365,7 +362,7 @@ input::-moz-focus-inner {
 }
 
 .navbar {
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: black;
   color: white;
@@ -380,7 +377,6 @@ input::-moz-focus-inner {
 }
 
 .navItem {
-  margin: 25px;
   letter-spacing: 0.2ch;
   cursor: pointer;
   height: 100%;
@@ -393,16 +389,37 @@ input::-moz-focus-inner {
   color: white;
 }
 
-#about:after, #contact:after {
+#about:after, #contact:after, #contact:focus {
   content: "";
   background-color: #00d5ff;
-  position: absolute;
-  height: 4px;
+  position: fixed;
+  height: 2px;
   width: 0px;
-  margin-top:28px;
+  margin-top:29px;
   transition: width .25s;
 }
 
 #about:hover:after, #contact:hover:after {
   width: 60px;
+}
+
+
+.midnav {
+  display: flex;
+  flex-direction: row;
+  margin-left:10px;
+  margin-bottom: 20px;;
+}
+
+.rightnav {
+  padding-right: 10px;
+}
+
+.leftnav {
+  width: 36px;
+}
+
+#linkedin:hover {
+  fill:#00d5ff;
+  cursor: pointer;
 }
