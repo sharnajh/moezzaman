@@ -1,24 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
-import { Route } from "react-router-dom";
-import Main from "./Main";
-import Bio from "./Bio";
 import BgSVG from "./BgSVG";
-import Message from "./Message";
 import NavBar from "./NavBar";
+import Routes from "./Routes"
 
-class App extends Component {
-  render() {
+const App = () => {
+  
     return (
       <div>
         <NavBar />
         <BgSVG />
-        <Route exact path="/" component={Main} />
-        <Route path="/about" component={Bio} />
-        <Route path="/contact" component={Message} />
+        <Routes />
       </div>
     );
-  }
 }
 
 export default App;

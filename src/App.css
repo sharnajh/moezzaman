@@ -191,6 +191,13 @@ a:visited {
     left: 35px;
     right: inherit;
   }
+  .navbar .midnav #about:hover, .navbar .midnav #contact:hover {
+    color: #00d5ff;
+  }
+  
+  .navbar .midnav #about:hover:after, .navbar .midnav #contact:hover:after {
+    width: 0px;
+  }
 }
 
 #formcontainer {
@@ -389,7 +396,7 @@ input::-moz-focus-inner {
   color: white;
 }
 
-#about:after, #contact:after, #contact:focus {
+#about:after, #contact:after {
   content: "";
   background-color: #00d5ff;
   position: fixed;
@@ -407,16 +414,24 @@ input::-moz-focus-inner {
 .midnav {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-left:10px;
-  margin-bottom: 20px;;
 }
 
 .rightnav {
   padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left:10px;
 }
 
 .leftnav {
   width: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left:10px;
 }
 
 #linkedin:hover {

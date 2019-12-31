@@ -1,9 +1,56 @@
 import React, { Component } from "react";
 import HomeSVG from "./HomeSVG";
 import { Link } from "react-router-dom";
+import { withRouter } from "react-router"
+import anime from "animejs/lib/anime.es.js";
 
 class NavBar extends Component {
   render() {
+    const { location } = this.props
+    const pathname = location.pathname
+    if (pathname === "/about") {
+      anime({
+        targets: "#about",
+        color: "#00d5ff"
+      })
+      anime({
+        targets: "#house",
+        fill: "#fff"
+      })
+      anime({
+        targets: "#contact",
+        color: "#fff"
+      })
+    } else if (pathname === "/") {
+      anime({
+        targets: "#about",
+        color: "#fff"
+      })
+      anime({
+        targets: "#house",
+        fill: "#00d5ff"
+      })
+      anime({
+        targets: "#contact",
+        color: "#fff"
+      }) 
+    } else if (pathname === "/contact") {
+      anime({
+        targets: "#about",
+        color: "#fff"
+      })
+      anime({
+        targets: "#house",
+        fill: "#fff"
+      })
+      anime({
+        targets: "#contact",
+        color: "#00d5ff"
+      }) 
+      
+    }
+    
+    
     return (
       <div className="navbar">
         <div className="leftnav">{""}</div>
@@ -43,4 +90,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default withRouter(NavBar);
