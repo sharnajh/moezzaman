@@ -8,6 +8,7 @@ class NavBar extends Component {
   render() {
     const { location } = this.props;
     const pathname = location.pathname;
+
     return (
       <div className="navbar">
         <div className="leftnav">{""}</div>

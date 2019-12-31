@@ -158,9 +158,6 @@ a:visited {
   .description {
     margin-bottom: 50px;
   }
-  #nav {
-    margin-left: -23px;
-  }
 
   #bio {
     justify-content: space-evenly;
@@ -191,12 +188,24 @@ a:visited {
     left: 35px;
     right: inherit;
   }
-  .navbar .midnav #about:hover, .navbar .midnav #contact:hover {
+  .navbar .midnav #about:hover,
+  .navbar .midnav #contact:hover {
     color: #00d5ff;
   }
-  
-  .navbar .midnav #about:hover:after, .navbar .midnav #contact:hover:after {
+
+  .navbar .midnav #about:hover:after,
+  .navbar .midnav #contact:hover:after {
     width: 0px;
+  }
+
+  .navbar .midnav #about:after,
+  .navbar .midnav #contact:after {
+    width: 0px;
+  }
+
+  .navbar .midnav #contactSelected:after,
+  .navbar .midnav #aboutSelected:after {
+    width: 0px !important;
   }
 }
 
@@ -396,49 +405,62 @@ input::-moz-focus-inner {
   color: white;
 }
 
-#about:after, #contact:after {
+#about:after,
+#contact:after {
   content: "";
   background-color: #00d5ff;
-  position: fixed;
+  position: absolute;
   height: 2px;
   width: 0px;
-  margin-top:29px;
-  transition: width .25s;
+  margin-top: 29px;
+  transition: width 0.25s;
 }
 
-#about:hover:after, #contact:hover:after {
+#about:hover:after,
+#contact:hover:after {
   width: 60px;
 }
 
-#aboutSelected, #contactSelected {
+#aboutSelected,
+#contactSelected {
   color: #00d5ff;
   transition: color 1s;
 }
 
-#aboutSelected:after, #contactSelected:after {
+#aboutSelected:after {
   content: "";
   background-color: #00d5ff;
-  position: fixed;
+  position: absolute;
   height: 2px;
   width: 60px;
-  margin-top:29px;
+  margin-top: 29px;
   transition: width 1s;
 }
-
+#contactSelected:after {
+  content: "";
+  background-color: #00d5ff;
+  position: absolute;
+  height: 2px;
+  width: 60px;
+  margin-top: 29px;
+  transition: width 1s;
+}
 
 .midnav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left:10px;
+  margin-left: 10px;
 }
 
 .rightnav {
   padding-right: 10px;
   display: flex;
+  width: 24px;
+  height: 24px;
   flex-direction: row;
   align-items: center;
-  margin-left:10px;
+  margin-left: 10px;
 }
 
 .leftnav {
@@ -446,10 +468,10 @@ input::-moz-focus-inner {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left:10px;
+  margin-left: 10px;
 }
 
 #linkedin:hover {
-  fill:#00d5ff;
+  fill: #00d5ff;
   cursor: pointer;
 }

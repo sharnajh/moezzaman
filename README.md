@@ -45,26 +45,13 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Technologies Used
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+This website was crafted with React.js. As much as I love Redux.js, it was excluded from this project as this
+website did not have any data or state (aside from the form). I used Adobe Illustrator to create the SVG in the
+"/about" page.
 
-### Analyzing the Bundle Size
+## New Technologies Used
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+With every single project, I try to incorporate at least one new technology. This time, I used Anime.js heavily to handle CSS and SVG animations. I also used AOS for scroll animations.
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
