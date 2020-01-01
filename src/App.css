@@ -416,9 +416,9 @@ input::-moz-focus-inner {
   transition: width 0.25s;
 }
 
-#about:hover:after,
-#contact:hover:after {
-  width: 60px;
+#about:hover,
+#contact:hover {
+  color: #00d5ff;
 }
 
 #aboutSelected,

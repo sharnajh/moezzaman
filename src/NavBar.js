@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import HomeSVG from "./HomeSVG";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
-import anime from "animejs/lib/anime.es.js";
 
 class NavBar extends Component {
   render() {
