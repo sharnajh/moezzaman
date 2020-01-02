@@ -207,6 +207,25 @@ a:visited {
   .navbar .midnav #aboutSelected:after {
     width: 0px !important;
   }
+
+  .section .message-form {
+    width: 80%;
+  }
+
+  .section .message-form .header .contactdetails h3 {
+    font-size: 20px;
+  }
+
+  .section .message-form .header .contactdetails .email h4 {
+    font-size: 15px;
+  }
+
+  .section .message-form .header .picwrapper .contactpic {
+    width: 70px;
+    height: 70px;
+    border: 0px;
+    margin-right: 10px;
+  }
 }
 
 #bio {
@@ -494,6 +513,7 @@ a:visited {
   padding: 10px;
   box-sizing: border-box;
   margin-bottom: 10px;
+  align-items: center;
 }
 
 .header h3, .header h4 {
@@ -532,4 +552,25 @@ a:visited {
   float:right;
   width:80%;
   box-sizing: border-box;
+}
+
+.linked {
+  width: 20px;
+}
+
+.mailiconwrapper {
+  width: 20px;
+  margin:0;
+  display:flex;
+  margin-right:5px;
+}
+
+.mailiconwrapper svg {
+  fill: #00d5ff;
+}
+
+.email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
