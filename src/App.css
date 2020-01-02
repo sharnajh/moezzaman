@@ -429,17 +429,107 @@ a:visited {
 .message-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 10px;
+  width: 40%;
+  font-size: 20px;
+  font-weight: 200;
 }
 
 .message-input {
-  width:100%;
-  padding:10px;
-  margin-bottom: 10px;
-  font-size: 20px;
-  width: 400px;
   color: white;
-  background-color: black;
+}
+
+.message-input input,
+.message-input textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  color: white;
+  background-color: rgb(26, 26, 26);
   border: 0px transparent;
+  display: block;
+  margin: 0;
+  font-size: 20px;
+  outline: none;
+  font-weight: 200;
+}
+
+.message-input:after {
+  content: "";
+  width: 0px;
+  height: 5px;
+  display: inline-block;
+  margin: 0;
+  transition: width 1s;
+}
+
+#selected-input:after {
+  content: "";
+  background-color: #00d5ff;
+  display: inline-block;
+  height: 5px;
+  width: 100%;
+  margin-bottom: 14px;
+  transition: width 1s;
+}
+
+#submit-button {
+  padding: 20px;
+  text-align: center;
+  border: 2px solid white;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#submit-button:hover {
+  background-color: #00d5ff;
+  color: black;
+  border: 2px solid #00d5ff;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.header h3, .header h4 {
+  margin:0;
+  font-weight: 200;
+}
+
+.header h3 {
+  font-size: 30px;
+}
+
+.header h4 {
+  font-size: 20px;
+}
+
+.picwrapper {
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.contactpic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #00d5ff;
+  border: 5px solid #00d5ff;
+  float:left;
+  box-sizing: border-box;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-image: url('./MoPic.png');
+}
+
+.contactdetails {
+  float:right;
+  width:80%;
+  box-sizing: border-box;
 }

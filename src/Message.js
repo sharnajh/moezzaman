@@ -5,7 +5,8 @@ class Message extends Component {
   state = {
     name: "",
     email: "",
-    message: ""
+    message: "",
+    focused: ""
   };
 
   setName = e => {
@@ -22,6 +23,15 @@ class Message extends Component {
   setMessage = e => {
     e.preventDefault();
     this.setState({ message: e.target.value });
+  };
+
+  handleFocus = e => {
+    console.log(e);
+    this.setState({ focused: e.target.name });
+  };
+
+  handleBlur = e => {
+    e.preventDefault();
   };
 
   handleSubmit = e => {
@@ -70,40 +80,66 @@ class Message extends Component {
   }
 
   render() {
-    console.log(this.state.name, this.state.email, this.state.message);
+    console.log(this.state.focused);
     return (
-      <div className="section" style={{ alignItems: "space-between" }}>
-        <h3 id="mail">Contact Moe</h3>
+      <div className="section" style={{ alignItems: "center" }}>
         <form className="message-form" onSubmit={this.handleSubmit}>
-          <input
+        <div className="header">
+          <div className="picwrapper">
+          <div className="contactpic" />
+          </div>
+          <div className="contactdetails">
+            <h3>Contact Moe Zzaman</h3>
+            <h4>E: moezzaman3@gmail.com</h4>
+          </div>
+        </div>
+          <div
             className="message-input"
-            id="name"
-            type="text"
-            placeholder="Type your name here"
-            value={this.state.name}
-            onChange={this.setName}
-          ></input>
-
-          <input
+            id={this.state.focused === "name" ? "selected-input" : ""}
+          >
+            <input
+              name="name"
+              type="text"
+              placeholder="Type your name here"
+              value={this.state.name}
+              onChange={this.setName}
+              onFocus={this.handleFocus}
+              onBlur={this.handleBlur}
+            ></input>
+          </div>
+          <div
             className="message-input"
-            id="email"
-            type="email"
-            placeholder="Type your email here"
-            value={this.state.email}
-            onChange={this.setEmail}
-          ></input>
-
-          <textarea
+            id={this.state.focused === "email" ? "selected-input" : ""}
+          >
+            <input
+              className="message-input"
+              name="email"
+              type="email"
+              placeholder="Type your email here"
+              value={this.state.email}
+              onChange={this.setEmail}
+              onFocus={this.handleFocus}
+              onBlur={this.handleBlur}
+            ></input>
+          </div>
+          <div
             className="message-input"
-            id="message"
-            rows="5"
-            placeholder="Type your message here"
-            value={this.state.message}
-            onChange={this.setMessage}
-            
-          ></textarea>
-
-          <button type="submit">Send Message</button>
+            id={this.state.focused === "message" ? "selected-input" : ""}
+          >
+            <textarea
+              className="message-input"
+              name="message"
+              rows="2"
+              placeholder="Type your message here"
+              value={this.state.message}
+              onChange={this.setMessage}
+              onFocus={this.handleFocus}
+              onBlur={this.handleBlur}
+            ></textarea>
+          </div>
+          <div id="submit-button" onClick={this.handleSubmit}>
+            Send Message
+          </div>
         </form>
       </div>
     );
