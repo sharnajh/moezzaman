@@ -209,56 +209,6 @@ a:visited {
   }
 }
 
-#formcontainer {
-  height: 630px;
-  width: 320px;
-  overflow: hidden;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-
-.form {
-  margin: 40px;
-  height: 302px;
-  width: 320px;
-  position: absolute;
-  overflow: hidden;
-}
-label {
-  color: #c2c2c5;
-  display: block;
-  font-size: 14px;
-  height: 16px;
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-input {
-  background: transparent;
-  border: 0;
-  color: #f2f2f2;
-  font-size: 20px;
-  height: 30px;
-  line-height: 30px;
-  width: 75%;
-  outline: none !important;
-}
-input::-moz-focus-inner {
-  border: 0;
-}
-#submit {
-  color: #707075;
-  margin-top: 40px;
-  transition: color 300ms;
-  text-align: center;
-  cursor: pointer;
-}
-#submit:focus {
-  color: #f2f2f2;
-}
-#submit:active {
-  color: #d0d0d2;
-}
-
 #bio {
   height: auto !important;
   overflow: hidden;
@@ -474,4 +424,22 @@ input::-moz-focus-inner {
 #linkedin:hover {
   fill: #00d5ff;
   cursor: pointer;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.message-input {
+  width:100%;
+  padding:10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  width: 400px;
+  color: white;
+  background-color: black;
+  border: 0px transparent;
 }
