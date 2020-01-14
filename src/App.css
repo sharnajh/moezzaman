@@ -71,7 +71,8 @@ svg {
   text-transform: uppercase;
   letter-spacing: 0.5em;
   cursor: pointer;
-  margin: 0;
+  margin:0;
+  margin-left: 0.5em;
   color: white;
 }
 
@@ -80,18 +81,19 @@ svg {
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 0.8em;
-  color: white;
+  margin:0;
+  margin-top: 2em;
+  margin-left: 0.4em;
+  color: black;
   text-align: center;
 }
 
 .subtitle .letter {
   display: inline-block;
-  line-height: 2em;
 }
 
 .title .letter {
   display: inline-block;
-  line-height: 1em;
 }
 
 #nav {

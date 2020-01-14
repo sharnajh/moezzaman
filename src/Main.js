@@ -30,7 +30,7 @@ class Main extends Component {
           targets: ".subtitle .letter",
           translateX: [100, 0],
           opacity: [0, 1],
-          color: "#fff",
+          color: "#00d5ff",
           delay: (el, i) => 600 + 90 * i
         },
         1500
