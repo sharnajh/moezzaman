@@ -10,7 +10,7 @@ A frontend resume website built for a client with a focus on minimal and modern 
 * SVGs drawn in Adobe Illustrator
 * SVG and CSS animations with [animejs](https://animejs.com/)
 * [EmailJS](https://www.emailjs.com/)
-* Deployed with Github Pages ([www.moezzaman.com](www.moezzaman.com))
+* Deployed with Github Pages ([www.moezzaman.com](https://moezzaman.com))
 
 ## Tested
 * Tested on Google Chrome and Opera
