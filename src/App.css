@@ -214,11 +214,11 @@ a:visited {
     width: 80%;
   }
 
-  .section .message-form .header .contactdetails h3 {
+  .section .message-form .header .contactdetails .hed1 {
     font-size: 20px;
   }
 
-  .section .message-form .header .contactdetails .email h4 {
+  .section .message-form .header .contactdetails .email .hed2 {
     font-size: 15px;
   }
 
@@ -510,30 +510,29 @@ a:visited {
 }
 
 .header {
-  display: flex;
-  width: 100%;
   padding: 10px;
-  box-sizing: border-box;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.header h3, .header h4 {
+.hed1, .hed2 {
   margin:0;
   font-weight: 200;
+  display: block;
 }
 
-.header h3 {
+.hed1 {
   font-size: 30px;
 }
 
-.header h4 {
+.hed2 {
   font-size: 20px;
 }
 
 .picwrapper {
   width: 25%;
-  box-sizing: border-box;
 }
 
 .contactpic {
@@ -542,18 +541,10 @@ a:visited {
   border-radius: 50%;
   background-color: #00d5ff;
   border: 5px solid #00d5ff;
-  float:left;
-  box-sizing: border-box;
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
   background-image: url('./MoPic.png');
-}
-
-.contactdetails {
-  float:right;
-  width:80%;
-  box-sizing: border-box;
 }
 
 .linked {
