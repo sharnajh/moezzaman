@@ -172,7 +172,7 @@ class Message extends Component {
                 <div className="contactpic" />
               </div>
               <div className="contactdetails">
-                <h3>Contact Moe Zzaman</h3>
+                <h3 className={{ display: "inline-block" }}>Contact Moe Zzaman</h3>
                 <div className="email">
                   <div className="mailiconwrapper">
                     <svg
