@@ -3,6 +3,7 @@
 ![screenshot](public/screenshot.png)
 
 A frontend resume website built for a client with a focus on minimal and modern design. Built with React.js.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2582f629-3742-4ca8-98ac-338bedb72c01/deploy-status)](https://app.netlify.com/sites/kind-ardinghelli-87cf0b/deploys)
 
 ## Technologies
 * Bootstrapped with [create-react-app](https://github.com/facebook/create-react-app)
