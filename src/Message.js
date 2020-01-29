@@ -100,7 +100,7 @@ class Message extends Component {
             </div>
           </div>
         )}
-        <div className="section" id="msg-section">
+        <div className="section" id="msg-section" style={{ justifyContent: "flex-start"}}>
           <div className="header">
             <div className="picwrapper">
               <div className="contactpic" />
