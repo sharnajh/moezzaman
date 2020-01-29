@@ -563,7 +563,7 @@ a:visited {
 }
 
 .mailiconwrapper {
-  width: 20px;
+  width: 20px !important;
   margin: 0;
   padding: 0;
   margin-right: 5px;
@@ -571,7 +571,7 @@ a:visited {
 
 .mailiconwrapper svg {
   fill: #00d5ff;
-  width: 20px;
+  width: 20px !important;
   margin: 0;
   padding: 0;
 }
