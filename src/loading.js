@@ -13,11 +13,11 @@ const Loading = () => {
         cx="50"
         cy="50"
         r="16"
-        stroke-width="3"
+        strokeWidth="3"
         stroke="#ffffff"
-        stroke-dasharray="25.132741228718345 25.132741228718345"
+        strokeDasharray="25.132741228718345 25.132741228718345"
         fill="none"
-        stroke-linecap="round"
+        strokeLinecap="round"
         style={{
           animationPlayState: "running",
           animationDelay: "0s"
@@ -41,12 +41,12 @@ const Loading = () => {
         cx="50"
         cy="50"
         r="12"
-        stroke-width="3"
+        strokeWidth="3"
         stroke="#00d5ff"
-        stroke-dasharray="18.84955592153876 18.84955592153876"
-        stroke-dashoffset="18.84955592153876"
+        strokeDasharray="18.84955592153876 18.84955592153876"
+        strokeDashoffset="18.84955592153876"
         fill="none"
-        stroke-linecap="round"
+        strokeLinecap="round"
         style={{
           animationPlayState: "running",
           animationDelay: "0s"

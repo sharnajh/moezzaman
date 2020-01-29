@@ -9,8 +9,10 @@ class Message extends Component {
     email: "",
     message: "",
     focused: "",
-    isLoading: false
+    isLoading: false,
+    success: false
   };
+
   formValidate = () => {
     const { name, email, message, isLoading } = this.state;
     return name === "" ||
@@ -42,13 +44,14 @@ class Message extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    const template_id = "moe_zzaman";
     if (this.formValidate() === false) {
-      this.setState({ isLoading: true });
-      const template_id = "moe_zzaman";
-      this.sendFeedback(template_id, {
-        message: this.state.message,
-        user_name: this.state.name,
-        user_email: this.state.email
+      this.setState({ isLoading: true }, () => {
+        this.sendFeedback(template_id, {
+          message: this.state.message,
+          user_name: this.state.name,
+          user_email: this.state.email
+        });
       });
     }
   };
@@ -61,17 +64,24 @@ class Message extends Component {
           name: "",
           email: "",
           message: "",
-          isLoading: false
+          success: true
         });
         console.log("Email successfully sent!");
       })
-      .catch(err =>
+      .catch(err => {
         console.error(
           "Oh well, you failed. Here some thoughts on the error that occured:",
           err
-        )
+        )}
       );
   }
+
+  sendSuccess = () => {
+    this.setState({
+      isLoading: false,
+      success: false
+    });
+  };
 
   componentDidMount() {
     anime(
@@ -94,13 +104,31 @@ class Message extends Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <div>
         {this.state.isLoading && (
           <div className="loadingscreen">
             <div className="loadingmodal">
-              {this.state.isLoading && <Loading />}
-              {this.state.isLoading && "Sending..."}
+              {this.state.isLoading && this.state.success === false && (
+                <div>
+                  <Loading />
+                  <p>Sending...</p>
+                </div>
+              )}
+              {this.state.isLoading && this.state.success && (
+                <div>
+                  <p style={{ fontSize: "25px" }}>
+                    <span role="img" aria-label="celebration emoji">
+                      🎉
+                    </span>
+                  </p>
+                  <p>Your message has been sent!</p>
+                  <button className="close-btn" onClick={this.sendSuccess}>
+                    Close
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -175,7 +203,7 @@ class Message extends Component {
                   ? "submit-button-disabled"
                   : "submit-button-enabled"
               }
-              onSubmit={this.handleSubmit}
+              onClick={this.handleSubmit}
             >
               Send Message
             </button>

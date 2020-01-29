@@ -530,13 +530,6 @@ a:visited {
   border: 2px solid #00d5ff;
 }
 
-.validate-text {
-  color: white;
-  font-weight: 200;
-  font-size: 12px;
-  display: inline-block;
-}
-
 .header {
   padding: 10px;
   margin-bottom: 10px;
@@ -610,13 +603,41 @@ a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-weight: 200;
 }
 
 .loadingmodal {
-  padding: 40px;
   padding-bottom: 20px;
   color: #00d5ff;
-  width: 100px;
+  width: 150px;
+  padding: 20px;
   text-align: center;
   background-color: black;
+}
+
+.loadingmodal p {
+  margin: 0;
+  padding: 10px;
+  display: inline-block;
+}
+
+.close-btn {
+  width: 100%;
+  border-radius: 0;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 200;
+  outline: none;
+  border: 0;
+  background-color: black;
+  color: #00d5ff;
+  border: 2px solid #00d5ff;
+}
+
+.close-btn:hover {
+  background-color: #00d5ff;
+  color: black;
 }
