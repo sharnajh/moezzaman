@@ -503,19 +503,33 @@ a:visited {
   transition: width 0.75s;
 }
 
-#submit-button {
+.submit-button {
   padding: 20px;
   text-align: center;
-  border: 2px solid white;
-  color: white;
   display: inline-block;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: 200;
+  outline: none;
 }
 
-#submit-button:hover {
+#submit-button-disabled {
+  border: 2px solid white;
+  color: white;
+  background-color: black;
+}
+
+#submit-button-enabled {
   background-color: #00d5ff;
   color: black;
   border: 2px solid #00d5ff;
+}
+
+.validate-text {
+  color: white;
+  font-weight: 200;
+  font-size: 12px;
+  display: inline-block;
 }
 
 .header {

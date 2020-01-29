@@ -11,20 +11,27 @@ class Message extends Component {
     focused: "",
     isLoading: false
   };
+  formValidate = () => {
+    const { name, email, message, isLoading } = this.state;
+    return name === "" ||
+      email === "" ||
+      message === "" ||
+      isLoading === true ||
+      email.includes("@") === false
+      ? true
+      : false;
+  };
 
   setName = e => {
-    e.preventDefault();
     this.setState({ name: e.target.value });
   };
 
   setEmail = e => {
-    e.preventDefault();
-    const text = e.target.value.trim();
-    this.setState({ email: text });
+    const email = e.target.value.trim();
+    this.setState({ email });
   };
 
   setMessage = e => {
-    e.preventDefault();
     this.setState({ message: e.target.value });
   };
 
@@ -33,19 +40,17 @@ class Message extends Component {
     this.setState({ focused: e.target.name });
   };
 
-  handleBlur = e => {
-    e.preventDefault();
-  };
-
   handleSubmit = e => {
     e.preventDefault();
-    this.setState({ isLoading: true });
-    const template_id = "moe_zzaman";
-    this.sendFeedback(template_id, {
-      message: this.state.message,
-      user_name: this.state.name,
-      user_email: this.state.email
-    });
+    if (this.formValidate() === false) {
+      this.setState({ isLoading: true });
+      const template_id = "moe_zzaman";
+      this.sendFeedback(template_id, {
+        message: this.state.message,
+        user_name: this.state.name,
+        user_email: this.state.email
+      });
+    }
   };
 
   sendFeedback(template_id, variables) {
@@ -89,7 +94,6 @@ class Message extends Component {
   }
 
   render() {
-    console.log(this.state.focused);
     return (
       <div>
         {this.state.isLoading && (
@@ -131,7 +135,7 @@ class Message extends Component {
                 value={this.state.name}
                 onChange={this.setName}
                 onFocus={this.handleFocus}
-                onBlur={this.handleBlur}
+                required
               ></input>
             </div>
             <div
@@ -146,7 +150,7 @@ class Message extends Component {
                 value={this.state.email}
                 onChange={this.setEmail}
                 onFocus={this.handleFocus}
-                onBlur={this.handleBlur}
+                required
               ></input>
             </div>
             <div
@@ -161,16 +165,20 @@ class Message extends Component {
                 value={this.state.message}
                 onChange={this.setMessage}
                 onFocus={this.handleFocus}
-                onBlur={this.handleBlur}
+                required
               ></textarea>
             </div>
-            <div
-              id="submit-button"
-              onClick={this.handleSubmit}
-              disabled={this.state.isLoading}
+            <button
+              className="submit-button"
+              id={
+                this.formValidate()
+                  ? "submit-button-disabled"
+                  : "submit-button-enabled"
+              }
+              onSubmit={this.handleSubmit}
             >
               Send Message
-            </div>
+            </button>
           </form>
         </div>
       </div>
