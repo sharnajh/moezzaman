@@ -5,6 +5,8 @@ const Mail = () => {
     <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
+      width="511.626px"
+      height="511.626px"
       viewBox="0 0 511.626 511.626"
       margin="0"
       padding="0"
