@@ -197,6 +197,7 @@ class Message extends Component {
               ></textarea>
             </div>
             <button
+              type="submit"
               className="submit-button"
               id={
                 this.formValidate()
