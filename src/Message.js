@@ -9,16 +9,17 @@ class Message extends Component {
     email: "",
     message: "",
     focused: "",
-    isLoading: false,
-    success: false
+    isSending: false,
+    success: false,
+    failure: false
   };
 
   formValidate = () => {
-    const { name, email, message, isLoading } = this.state;
+    const { name, email, message, isSending } = this.state;
     return name === "" ||
       email === "" ||
       message === "" ||
-      isLoading === true ||
+      isSending === true ||
       email.includes("@") === false
       ? true
       : false;
@@ -46,7 +47,7 @@ class Message extends Component {
     e.preventDefault();
     const template_id = "moe_zzaman";
     if (this.formValidate() === false) {
-      this.setState({ isLoading: true }, () => {
+      this.setState({ isSending: true }, () => {
         this.sendFeedback(template_id, {
           message: this.state.message,
           user_name: this.state.name,
@@ -60,25 +61,31 @@ class Message extends Component {
     window.emailjs
       .send("gmail", template_id, variables)
       .then(res => {
-        this.setState({
-          name: "",
-          email: "",
-          message: "",
-          success: true
-        });
-        console.log("Email successfully sent!");
+        this.setState(
+          {
+            name: "",
+            email: "",
+            message: "",
+            success: true
+          },
+          () => {
+            console.log("Email successfully sent!");
+          }
+        );
       })
       .catch(err => {
-        console.error(
-          "Oh well, you failed. Here some thoughts on the error that occured:",
-          err
-        )}
-      );
+        this.setState({ failure: true }, () => {
+          console.error(
+            "Oh well, you failed. Here some thoughts on the error that occured:",
+            err
+          );
+        });
+      });
   }
 
   sendSuccess = () => {
     this.setState({
-      isLoading: false,
+      isSending: false,
       success: false
     });
   };
@@ -104,31 +111,52 @@ class Message extends Component {
   }
 
   render() {
-    console.log(this.state)
+    console.log(this.state);
     return (
       <div>
-        {this.state.isLoading && (
+        {this.state.isSending && (
           <div className="loadingscreen">
             <div className="loadingmodal">
-              {this.state.isLoading && this.state.success === false && (
-                <div>
-                  <Loading />
-                  <p>Sending...</p>
-                </div>
-              )}
-              {this.state.isLoading && this.state.success && (
-                <div>
-                  <p style={{ fontSize: "25px" }}>
-                    <span role="img" aria-label="celebration emoji">
-                      🎉
-                    </span>
-                  </p>
-                  <p>Your message has been sent!</p>
-                  <button className="close-btn" onClick={this.sendSuccess}>
-                    Close
-                  </button>
-                </div>
-              )}
+              {this.state.isSending &&
+                this.state.success === false &&
+                this.state.failure === false && (
+                  <div>
+                    <Loading />
+                    <p>Sending...</p>
+                  </div>
+                )}
+              {this.state.isSending &&
+                this.state.success &&
+                this.state.failure === false && (
+                  <div>
+                    <p style={{ fontSize: "25px" }}>
+                      <span role="img" aria-label="celebration emoji">
+                        🎉
+                      </span>
+                    </p>
+                    <p>Your message has been sent!</p>
+                    <button className="close-btn" onClick={this.sendSuccess}>
+                      Close
+                    </button>
+                  </div>
+                )}
+              {this.state.isSending &&
+                this.state.success === false &&
+                this.state.failure && (
+                  <div>
+                    <p style={{ fontSize: "25px" }}>
+                      <span role="img" aria-label="failure emoji">
+                        😕
+                      </span>
+                    </p>
+                    <p>
+                      Whoops, there was an error while sending your message.
+                    </p>
+                    <button className="close-btn" onClick={this.sendSuccess}>
+                      Try again
+                    </button>
+                  </div>
+                )}
             </div>
           </div>
         )}
