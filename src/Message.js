@@ -203,7 +203,7 @@ class Message extends Component {
                   ? "submit-button-disabled"
                   : "submit-button-enabled"
               }
-              onClick={this.handleSubmit}
+              onSubmit={this.handleSubmit}
             >
               Send Message
             </button>
