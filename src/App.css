@@ -153,8 +153,8 @@ a:visited {
 
 @media only screen and (max-width: 1024px) {
   .title {
-    font-size: 2em;
-    margin-left: 11px;
+    font-size: 5.5em;
+    margin-left: 15px;
   }
   .subtitle {
     font-size: 0.7em;
