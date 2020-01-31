@@ -293,6 +293,11 @@ a:visited {
   box-sizing: border-box;
 }
 
+.timeline ul li h4 {
+  font-weight: 400;
+  color: gray;
+}
+
 .timeline ul li:nth-child(odd) {
   float: left;
   text-align: right;
@@ -331,9 +336,6 @@ a:visited {
   background-color: white;
   border-radius: 50%;
   box-shadow: 0 0 0 3px #00d5ff;
-}
-
-.timeline ul li h3, .timeline ul li h4 {
 }
 
 .timeline ul li h3 {
