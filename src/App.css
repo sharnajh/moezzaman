@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Six+Caps&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -28,7 +30,7 @@ body {
 }
 
 .description {
-  width: 70%;
+  width: 65%;
   margin-bottom: 50px;
   line-height: 1.5;
 }
@@ -45,13 +47,18 @@ svg {
 }
 
 .moetitle {
-  font-size: 130px;
-  letter-spacing: 0.2ch;
+  font-size: 230px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-weight: 100;
+  margin:0;
+  font-family: 'Six Caps', sans-serif;
 }
 
 .moetivation {
   display: flex;
   align-items: center;
+  margin:30px;
 }
 
 .section {
@@ -153,14 +160,15 @@ a:visited {
     margin-left: 5px;
   }
   .moetitle {
-    font-size: 70px;
+    font-size: 130px;
   }
   #svgcontainer {
-    width: 115px;
+    width: 135px;
     padding: 10px;
   }
   .description {
     margin-bottom: 50px;
+    width: 80%;
   }
 
   #bio {
@@ -251,6 +259,7 @@ a:visited {
   flex-direction: column;
   top: 20px;
   padding-top: 40px;
+  font-weight: 300;
 }
 
 .timeline {
@@ -322,6 +331,9 @@ a:visited {
   background-color: white;
   border-radius: 50%;
   box-shadow: 0 0 0 3px #00d5ff;
+}
+
+.timeline ul li h3, .timeline ul li h4 {
 }
 
 .timeline ul li h3 {

@@ -179,7 +179,7 @@ class Message extends Component {
               </div>
             </div>
           </div>
-          <form className="message-form">
+          <form className="message-form" onSubmit={this.handleSubmit}>
             <div
               className="message-input"
               id={this.state.focused === "name" ? "selected-input" : ""}
@@ -232,7 +232,6 @@ class Message extends Component {
                   ? "submit-button-disabled"
                   : "submit-button-enabled"
               }
-              onSubmit={this.handleSubmit}
             >
               Send Message
             </button>
