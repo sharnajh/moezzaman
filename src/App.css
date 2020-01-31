@@ -75,13 +75,14 @@ svg {
 
 .title {
   font-weight: 200;
-  font-size: 3em;
+  font-size: 7em;
   text-transform: uppercase;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.2em;
   cursor: pointer;
   margin: 0;
-  margin-left: 0.5em;
+  margin-left: 15px;
   color: white;
+  font-family: 'Six Caps', sans-serif;
 }
 
 .subtitle {

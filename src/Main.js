@@ -9,7 +9,7 @@ class Main extends Component {
     tl.add(
       {
         targets: ".title .letter",
-        translateX: [100, 0],
+        translateX: [120, 0],
         translateZ: 0,
         opacity: [0, 1],
         duration: 3000,
