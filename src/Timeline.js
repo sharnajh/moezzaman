@@ -21,6 +21,7 @@ class Timeline extends Component {
             data-aos-duration="1200"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
+            data-aos-anchor-placement="top"
           >
             <div className="content">
               <h3>Financial Representative</h3>
@@ -51,7 +52,7 @@ class Timeline extends Component {
             data-aos-duration="1200"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
-            data-aos-anchor-placement="top-center"
+            data-aos-anchor-placement="top"
           >
             <div className="content">
               <h3>Bank Teller II</h3>
@@ -77,7 +78,7 @@ class Timeline extends Component {
             data-aos-duration="1200"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
-            data-aos-anchor-placement="top-center"
+            data-aos-anchor-placement="top"
           >
             <div className="content">
               <h3>Cofounder & Executive Director of Marketing</h3>
@@ -115,7 +116,7 @@ class Timeline extends Component {
             data-aos-duration="1200"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
-            data-aos-anchor-placement="top-center"
+            data-aos-anchor-placement="top"
             data-aos-offset="50"
           >
             <div className="content">
@@ -135,7 +136,7 @@ class Timeline extends Component {
             data-aos-duration="1200"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
-            data-aos-anchor-placement="top-center"
+            data-aos-anchor-placement="top"
           >
             <div className="content">
               <h3>Account Manager</h3>
@@ -166,7 +167,7 @@ class Timeline extends Component {
             data-aos-duration="1200"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
-            data-aos-anchor-placement="top-center"
+            data-aos-anchor-placement="top"
           >
             <div className="content">
               <h3>Personal Banker</h3>
