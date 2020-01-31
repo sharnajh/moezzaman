@@ -170,7 +170,7 @@ class Message extends Component {
               <div className="contactpic" />
             </div>
             <div className="contactdetails">
-              <div className="hed1">Send Moe a message</div>
+              <div className="hed1">Contact Moe</div>
               <div className="email">
                 <div className="mailiconwrapper">
                   <Mail />
