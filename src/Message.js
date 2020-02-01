@@ -172,9 +172,6 @@ class Message extends Component {
             <div className="contactdetails">
               <div className="hed1">Contact Moe</div>
               <div className="email">
-                <div className="mailiconwrapper">
-                  <Mail />
-                </div>
                 <div className="hed2">moezzaman3@gmail.com</div>
               </div>
             </div>
