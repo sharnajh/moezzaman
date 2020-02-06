@@ -91,22 +91,23 @@ class Message extends Component {
   };
 
   componentDidMount() {
-    anime(
+    const tl = anime.timeline({
+      easing: "easeOutExpo"
+    });
+    tl.add(
       {
         targets: ".polymorph",
         points: [{ value: "215,110 0,110 0,0 215,0" }],
         duration: 1500,
-        easing: "easeOutExpo"
-      },
-      0
-    );
-    anime(
+      }
+    )
+    .add(
       {
         targets: ".section",
         opacity: [0, 1],
-        duration: 5000
+        duration: 1000
       },
-      1500
+      450
     );
   }
 
