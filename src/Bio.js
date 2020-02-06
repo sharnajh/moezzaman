@@ -4,9 +4,6 @@ import anime from "animejs/lib/anime.es.js";
 import Timeline from "./Timeline";
 
 class Bio extends Component {
-  state = {
-    pathLength: null
-  };
   componentDidMount() {
     const tl = anime.timeline({
       easing: "easeOutExpo"

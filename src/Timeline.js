@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -11,8 +11,7 @@ import baruch from "./companylogos/baruch.png";
 
 AOS.init();
 
-class Timeline extends Component {
-  render() {
+const Timeline = () => {
     return (
       <div className="timeline">
         <ul>
@@ -202,6 +201,5 @@ class Timeline extends Component {
       </div>
     );
   }
-}
 
 export default Timeline;
