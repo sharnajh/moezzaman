@@ -570,6 +570,7 @@ a:visited {
 
 .hed2 {
   font-size: 20px;
+  color: #00d5ff;
 }
 
 .contactpic {
@@ -581,7 +582,7 @@ a:visited {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("./MoPic.png");
+  background-image: url("../photos/MoPic.png");
 }
 
 .linked {

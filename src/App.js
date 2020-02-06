@@ -1,6 +1,6 @@
 import React from "react";
-import "./App.css";
-import BgSVG from "./BgSVG";
+import "./css/App.css";
+import BgSVG from "./svgs/BgSVG";
 import NavBar from "./NavBar";
 import Routes from "./Routes";
 

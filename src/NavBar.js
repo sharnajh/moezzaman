@@ -1,5 +1,5 @@
 import React from "react";
-import HomeSVG from "./HomeSVG";
+import HomeSVG from "./svgs/HomeSVG";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 

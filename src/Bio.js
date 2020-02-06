@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import MoeSVG from "./MoeSVG";
+import MoeSVG from "./svgs/MoeSVG";
 import anime from "animejs/lib/anime.es.js";
 import Timeline from "./Timeline";
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Loading from "./loading";
-import Mail from "./mail";
+import Loading from "./svgs/loading";
+import Mail from "./svgs/mail";
 import anime from "animejs/lib/anime.es.js";
 
 class Message extends Component {
@@ -173,9 +173,6 @@ class Message extends Component {
             <div className="contactdetails">
               <div className="hed1">Contact Moe</div>
               <div className="email">
-                <div className="mailiconwrapper">
-                  <Mail />
-                </div>
                 <div className="hed2">moezzaman3@gmail.com</div>
               </div>
             </div>
