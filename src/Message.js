@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Loading from "./svgs/loading";
-import Mail from "./svgs/mail";
 import anime from "animejs/lib/anime.es.js";
 
 class Message extends Component {
